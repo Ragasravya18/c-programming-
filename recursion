@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void countDownWithAlternateNumbers(int n);
+
+int main() {
+    int n;
+    printf("Enter a value for countdown: ");
+    scanf("%d", &n); 
+    countDownWithAlternateNumbers(n);  
+    return 0;
+}
+
+void countDownWithAlternateNumbers(int n ){
+    if (n < 0){
+        return;}
+    printf("\n%d",n);
+    countDownWithAlternateNumbers(n - 2);
+    }
