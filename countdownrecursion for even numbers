@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+void countDown(int n);
+
+int main() {
+    int n;
+
+    printf("Enter a value for countdown: ");
+    scanf("%d", &n); 
+    countDown(n);  
+    return 0;
+}
+
+void countDown(int n) {
+    printf("CountDown started for method with n value %d\n", n);
+
+    if (n < 0) {
+        printf("\n\n\nStopping Count down...Happy Recursion Practice \n\n\n\n");
+        return;
+    }
+
+
+    if (n % 2 == 0) {
+        printf("Count Down starts now: %d\n", n);
+    }
+    
+    countDown(n - 1);  
+
+    if (n % 2 == 0) {
+        printf("CountDown completed for method with value %d\n", n);
+        
+    }
+}
